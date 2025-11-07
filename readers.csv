@@ -1,0 +1,6 @@
+id,name,email,membership_id,membership_type,join_date
+1,Cynthia Banu,cynthia.banu@email.com,MEM1,Premium,15/1/2024
+2,Bob Smith,bob.smith@email.com,MEM2,Regular,20/2/2024
+3,Emma Davis,emma.davis@email.com,MEM3,Regular,24/3/2010
+4,Shi Yan,shi.yan@email.com,MEM4,Premium,5/4/2024
+5,Alice Johnson,alice.johnson@email.com,MEM5,Student,12/5/2025

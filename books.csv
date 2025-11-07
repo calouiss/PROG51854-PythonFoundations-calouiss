@@ -1,0 +1,9 @@
+id,title,author,isbn,year,available
+1,The Spanish Love Deception,Elena Armas,978-1668001226,2021,true
+2,To Kill a Mockingbird,Harper Lee,978-0061120084,1960,true
+3,1984,George Orwell,978-0451524935,1949,true
+4,Pride and Prejudice,Jane Austen,978-0141439518,1813,true
+5,Beautiful Disaster,Jamie McGuire,978-1469225944,2011,true
+6,string,string,string,string,string
+7,The Lord of the Rings,J.R.R. Tolkien,978-0544003415,1954,true
+8,The Right Move,Liz Tomforde,978-1957363080,2022,true

@@ -1,0 +1,149 @@
+2025-11-07 05:13:30,602 - INFO - Request: GET /health
+2025-11-07 05:13:30,602 - INFO - Response: 200 OK - Health check passed
+2025-11-07 05:14:15,739 - INFO - Request: GET /items
+2025-11-07 05:14:15,739 - INFO - Response: 200 OK - Returned 8 books
+2025-11-07 05:14:36,338 - INFO - Request: GET /health
+2025-11-07 05:14:36,338 - INFO - Response: 200 OK - Health check passed
+2025-11-07 05:16:21,212 - INFO - Request: GET /health
+2025-11-07 05:16:21,213 - INFO - Response: 200 OK - Health check passed
+2025-11-07 05:16:21,215 - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2025-11-07 05:16:21,217 - INFO - Request: GET /items
+2025-11-07 05:16:21,217 - INFO - Response: 200 OK - Returned 8 books
+2025-11-07 05:16:21,218 - INFO - HTTP Request: GET http://testserver/items "HTTP/1.1 200 OK"
+2025-11-07 05:17:40,587 - INFO - Request: GET /health
+2025-11-07 05:17:40,587 - INFO - Response: 200 OK - Health check passed
+2025-11-07 05:17:40,589 - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2025-11-07 05:17:40,591 - INFO - Request: GET /items
+2025-11-07 05:17:40,591 - INFO - Response: 200 OK - Returned 8 books
+2025-11-07 05:17:40,592 - INFO - HTTP Request: GET http://testserver/items "HTTP/1.1 200 OK"
+2025-11-07 08:10:41,818 - INFO - Library Management System
+2025-11-07 08:10:47,756 - INFO - GET / - Request received
+2025-11-07 08:10:47,756 - INFO - GET / - Response: 404 OK - 0ms
+2025-11-07 08:11:02,583 - INFO - GET /health - Request received
+2025-11-07 08:11:02,585 - INFO - GET /health - Response: 200 OK - 1ms
+2025-11-07 08:12:33,450 - INFO - GET /books - Request received
+2025-11-07 08:12:33,451 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 08:14:03,857 - INFO - GET /docs - Request received
+2025-11-07 08:14:03,857 - INFO - GET /docs - Response: 200 OK - 0ms
+2025-11-07 08:14:04,382 - INFO - GET /openapi.json - Request received
+2025-11-07 08:14:04,386 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-11-07 08:14:04,389 - INFO - GET /openapi.json - Response: 200 OK - 6ms
+2025-11-07 08:17:47,401 - INFO - GET /books - Request received
+2025-11-07 08:17:47,402 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 08:20:39,497 - INFO - POST /books - Request received
+2025-11-07 08:20:39,499 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 08:21:12,465 - INFO - POST /books - Request received
+2025-11-07 08:21:12,467 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 08:21:18,821 - INFO - POST /books - Request received
+2025-11-07 08:21:18,823 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 08:28:15,739 - INFO - Library Management System
+2025-11-07 08:28:30,876 - INFO - GET /books/1 - Request received
+2025-11-07 08:28:30,878 - INFO - GET /books/1 - Response: 200 OK - 1ms
+2025-11-07 08:28:49,909 - INFO - GET /books/1 - Request received
+2025-11-07 08:28:49,910 - INFO - GET /books/1 - Response: 200 OK - 0ms
+2025-11-07 08:29:10,397 - INFO - GET /books/1 - Request received
+2025-11-07 08:29:10,398 - INFO - GET /books/1 - Response: 200 OK - 0ms
+2025-11-07 08:29:27,903 - INFO - PUT /books/1 - Request received
+2025-11-07 08:29:27,905 - INFO - PUT /books/1 - Response: 200 OK - 1ms
+2025-11-07 08:29:41,286 - INFO - DELETE /books/2 - Request received
+2025-11-07 08:29:41,289 - INFO - DELETE /books/2 - Response: 204 OK - 1ms
+2025-11-07 08:32:23,875 - INFO - GET /readers - Request received
+2025-11-07 08:32:23,876 - INFO - GET /readers - Response: 200 OK - 0ms
+2025-11-07 08:32:30,831 - INFO - POST /readers - Request received
+2025-11-07 08:32:30,832 - INFO - POST /readers - Response: 201 OK - 1ms
+2025-11-07 08:32:36,676 - INFO - DELETE /readers/1 - Request received
+2025-11-07 08:32:36,677 - INFO - DELETE /readers/1 - Response: 204 OK - 0ms
+2025-11-07 08:33:18,177 - INFO - GET /staff - Request received
+2025-11-07 08:33:18,178 - INFO - GET /staff - Response: 200 OK - 0ms
+2025-11-07 08:33:23,829 - INFO - POST /staff - Request received
+2025-11-07 08:33:23,831 - INFO - POST /staff - Response: 201 OK - 1ms
+2025-11-07 08:33:28,992 - INFO - DELETE /staff/1 - Request received
+2025-11-07 08:33:28,993 - INFO - DELETE /staff/1 - Response: 204 OK - 0ms
+2025-11-07 08:34:10,264 - INFO - GET /books/999 - Request received
+2025-11-07 08:34:10,265 - INFO - GET /books/999 - Response: 404 OK - 0ms
+2025-11-07 08:34:16,076 - INFO - GET /health - Request received
+2025-11-07 08:34:16,077 - INFO - GET /health - Response: 200 OK - 0ms
+2025-11-07 08:53:13,488 - INFO - GET /books - Request received
+2025-11-07 08:53:13,489 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 08:53:53,430 - INFO - POST /books - Request received
+2025-11-07 08:53:53,432 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 08:54:03,495 - INFO - POST /books - Request received
+2025-11-07 08:54:03,496 - INFO - POST /books - Response: 201 OK - 0ms
+2025-11-07 08:54:41,186 - INFO - GET /books/2 - Request received
+2025-11-07 08:54:41,187 - INFO - GET /books/2 - Response: 404 OK - 0ms
+2025-11-07 09:02:13,595 - INFO - GET /health - Request received
+2025-11-07 09:02:13,597 - INFO - GET /health - Response: 200 OK - 1ms
+2025-11-07 09:02:59,780 - INFO - GET /metrics - Request received
+2025-11-07 09:02:59,781 - INFO - GET /metrics - Response: 200 OK - 0ms
+2025-11-07 09:04:29,576 - INFO - GET /books - Request received
+2025-11-07 09:04:29,577 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 09:05:41,038 - INFO - GET //books/{id} - Request received
+2025-11-07 09:05:41,039 - INFO - GET //books/{id} - Response: 404 OK - 0ms
+2025-11-07 09:12:03,483 - INFO - GET /books - Request received
+2025-11-07 09:12:03,484 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 09:12:14,355 - INFO - POST /books - Request received
+2025-11-07 09:12:14,356 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 09:17:08,815 - INFO - GET / - Request received
+2025-11-07 09:17:08,828 - INFO - GET / - Response: 404 OK - 4ms
+2025-11-07 09:17:12,913 - INFO - GET /books - Request received
+2025-11-07 09:17:12,915 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-07 09:26:01,321 - INFO - POST /books - Request received
+2025-11-07 09:26:01,322 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 09:29:05,363 - INFO - GET /books - Request received
+2025-11-07 09:29:05,364 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-07 09:31:29,127 - INFO - GET /books/2 - Request received
+2025-11-07 09:31:29,127 - INFO - GET /books/2 - Response: 200 OK - 0ms
+2025-11-07 09:33:17,427 - INFO - GET /books - Request received
+2025-11-07 09:33:17,429 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-07 09:33:17,460 - INFO - POST /books - Request received
+2025-11-07 09:33:17,462 - INFO - POST /books - Response: 201 OK - 1ms
+2025-11-07 09:33:17,495 - INFO - PUT /books/2 - Request received
+2025-11-07 09:33:17,499 - INFO - PUT /books/2 - Response: 200 OK - 3ms
+2025-11-07 09:33:17,524 - INFO - DELETE /books/2 - Request received
+2025-11-07 09:33:17,526 - INFO - DELETE /books/2 - Response: 204 OK - 1ms
+2025-11-07 09:33:17,555 - INFO - GET /books/999 - Request received
+2025-11-07 09:33:17,556 - INFO - GET /books/999 - Response: 404 OK - 0ms
+2025-11-07 09:36:09,360 - INFO - GET /readers - Request received
+2025-11-07 09:36:09,361 - INFO - GET /readers - Response: 200 OK - 0ms
+2025-11-07 09:36:09,414 - INFO - POST /readers - Request received
+2025-11-07 09:36:09,416 - INFO - POST /readers - Response: 201 OK - 1ms
+2025-11-07 09:36:09,470 - INFO - PUT /readers/2 - Request received
+2025-11-07 09:36:09,472 - INFO - PUT /readers/2 - Response: 200 OK - 1ms
+2025-11-07 09:36:09,540 - INFO - DELETE /readers/2 - Request received
+2025-11-07 09:36:09,542 - INFO - DELETE /readers/2 - Response: 204 OK - 1ms
+2025-11-07 09:36:09,609 - INFO - GET /readers/999 - Request received
+2025-11-07 09:36:09,610 - INFO - GET /readers/999 - Response: 404 OK - 0ms
+2025-11-07 09:37:18,210 - INFO - GET /staff - Request received
+2025-11-07 09:37:18,211 - INFO - GET /staff - Response: 200 OK - 0ms
+2025-11-07 09:37:18,279 - INFO - POST /staff - Request received
+2025-11-07 09:37:18,281 - INFO - POST /staff - Response: 201 OK - 1ms
+2025-11-07 09:37:18,348 - INFO - PUT /staff/2 - Request received
+2025-11-07 09:37:18,350 - INFO - PUT /staff/2 - Response: 200 OK - 1ms
+2025-11-07 09:37:18,412 - INFO - DELETE /staff/2 - Request received
+2025-11-07 09:37:18,413 - INFO - DELETE /staff/2 - Response: 204 OK - 0ms
+2025-11-07 09:37:18,463 - INFO - GET /staff/999 - Request received
+2025-11-07 09:37:18,464 - INFO - GET /staff/999 - Response: 404 OK - 0ms
+2025-11-07 09:40:57,390 - INFO - GET /health - Request received
+2025-11-07 09:40:57,393 - INFO - GET /health - Response: 200 OK - 2ms
+2025-11-07 09:41:07,576 - INFO - GET /metrics - Request received
+2025-11-07 09:41:07,576 - INFO - GET /metrics - Response: 200 OK - 0ms
+2025-11-07 09:41:20,656 - INFO - GET /health - Request received
+2025-11-07 09:41:20,657 - INFO - GET /health - Response: 200 OK - 0ms
+2025-11-07 09:45:04,019 - INFO - GET /health - Request received
+2025-11-07 09:45:04,021 - INFO - GET /health - Response: 200 OK - 1ms
+2025-11-07 09:45:04,023 - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2025-11-07 09:45:04,025 - INFO - GET /items - Request received
+2025-11-07 09:45:04,025 - INFO - GET /items - Returned 8 books
+2025-11-07 09:45:04,026 - INFO - GET /items - Response: 200 OK - 0ms
+2025-11-07 09:45:04,027 - INFO - HTTP Request: GET http://testserver/items "HTTP/1.1 200 OK"
+2025-11-07 09:56:34,750 - INFO - GET / - Request received
+2025-11-07 09:56:34,750 - INFO - GET / - Response: 404 OK - 0ms
+2025-11-07 09:56:38,453 - INFO - GET /books - Request received
+2025-11-07 09:56:38,454 - INFO - GET /books - Response: 200 OK - 0ms
+2025-11-07 09:56:43,883 - INFO - GET /books/999 - Request received
+2025-11-07 09:56:43,884 - INFO - GET /books/999 - Response: 404 OK - 0ms
+2025-11-07 09:59:15,072 - INFO - GET /readers/999 - Request received
+2025-11-07 09:59:15,074 - INFO - GET /readers/999 - Response: 404 OK - 1ms
+2025-11-07 09:59:32,133 - INFO - GET /staff/999 - Request received
+2025-11-07 09:59:32,134 - INFO - GET /staff/999 - Response: 404 OK - 0ms
