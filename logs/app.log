@@ -147,3 +147,64 @@ To install, run: pip install email-validator
 2025-11-07 09:59:15,074 - INFO - GET /readers/999 - Response: 404 OK - 1ms
 2025-11-07 09:59:32,133 - INFO - GET /staff/999 - Request received
 2025-11-07 09:59:32,134 - INFO - GET /staff/999 - Response: 404 OK - 0ms
+2025-11-19 06:28:35,107 - INFO - Library Management System - Assignments 1, 2, 3
+2025-11-19 06:33:07,452 - INFO - GET / - Request received
+2025-11-19 06:33:07,453 - INFO - GET / - Response: 404 OK - 0ms
+2025-11-19 06:33:07,685 - INFO - GET /favicon.ico - Request received
+2025-11-19 06:33:07,686 - INFO - GET /favicon.ico - Response: 404 OK - 0ms
+2025-11-19 06:33:13,729 - INFO - GET /health - Request received
+2025-11-19 06:33:13,730 - INFO - GET /health - Response: 200 OK - 0ms
+2025-11-19 06:33:56,983 - INFO - GET /items - Request received
+2025-11-19 06:33:56,983 - INFO - GET /items - Returned 8 books
+2025-11-19 06:33:56,984 - INFO - GET /items - Response: 200 OK - 0ms
+2025-11-19 06:34:06,055 - INFO - GET /books - Request received
+2025-11-19 06:34:06,056 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-19 06:34:16,736 - INFO - GET /readers - Request received
+2025-11-19 06:34:16,737 - INFO - GET /readers - Response: 200 OK - 0ms
+2025-11-19 06:34:29,879 - INFO - GET /staff - Request received
+2025-11-19 06:34:29,882 - INFO - GET /staff - Response: 200 OK - 3ms
+2025-11-19 06:34:40,713 - INFO - GET /metrics - Request received
+2025-11-19 06:34:40,714 - INFO - GET /metrics - Response: 200 OK - 0ms
+2025-11-19 06:34:52,679 - INFO - GET /docs - Request received
+2025-11-19 06:34:52,679 - INFO - GET /docs - Response: 200 OK - 0ms
+2025-11-19 06:34:53,293 - INFO - GET /openapi.json - Request received
+2025-11-19 06:34:53,298 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-11-19 06:34:53,302 - INFO - GET /openapi.json - Response: 200 OK - 8ms
+2025-11-20 21:28:44,815 - INFO - Library Management System - Assignments 1, 2, 3
+2025-11-20 21:28:47,689 - INFO - GET / - Request received
+2025-11-20 21:28:47,689 - INFO - GET / - Response: 404 OK - 0ms
+2025-11-20 21:28:47,950 - INFO - GET /favicon.ico - Request received
+2025-11-20 21:28:47,951 - INFO - GET /favicon.ico - Response: 404 OK - 0ms
+2025-11-20 21:28:53,576 - INFO - GET /books - Request received
+2025-11-20 21:28:53,578 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-20 21:29:13,123 - INFO - GET /docs - Request received
+2025-11-20 21:29:13,124 - INFO - GET /docs - Response: 200 OK - 0ms
+2025-11-20 21:29:13,527 - INFO - GET /openapi.json - Request received
+2025-11-20 21:29:13,535 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-11-20 21:29:13,539 - INFO - GET /openapi.json - Response: 200 OK - 11ms
+2025-11-20 21:32:38,885 - INFO - GET /docs - Request received
+2025-11-20 21:32:38,886 - INFO - GET /docs - Response: 200 OK - 0ms
+2025-11-20 21:32:39,241 - INFO - GET /openapi.json - Request received
+2025-11-20 21:32:39,242 - INFO - GET /openapi.json - Response: 200 OK - 0ms
+2025-11-20 22:02:17,608 - INFO - Library Management System - Assignments 1, 2, 3
+2025-11-20 22:02:20,967 - INFO - GET /docs - Request received
+2025-11-20 22:02:20,968 - INFO - GET /docs - Response: 200 OK - 0ms
+2025-11-20 22:02:21,257 - INFO - GET /openapi.json - Request received
+2025-11-20 22:02:21,261 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-11-20 22:02:21,264 - INFO - GET /openapi.json - Response: 200 OK - 6ms
+2025-11-20 22:04:16,869 - INFO - POST /books - Request received
+2025-11-20 22:04:16,876 - INFO - POST /books - Response: 201 OK - 6ms
+2025-11-20 22:04:26,643 - INFO - GET /books - Request received
+2025-11-20 22:04:26,644 - INFO - GET /books - Response: 200 OK - 1ms
+2025-11-20 22:08:46,510 - INFO - GET /books/4 - Request received
+2025-11-20 22:08:46,511 - INFO - GET /books/4 - Response: 200 OK - 0ms
+2025-11-20 22:13:05,533 - INFO - GET /items - Request received
+2025-11-20 22:13:05,533 - INFO - GET /items - Returned 8 books
+2025-11-20 22:13:05,534 - INFO - GET /items - Response: 200 OK - 0ms
+2025-11-20 22:22:48,319 - INFO - GET /docs - Request received
+2025-11-20 22:22:48,322 - INFO - GET /docs - Response: 200 OK - 2ms
+2025-11-20 22:22:48,605 - INFO - GET /openapi.json - Request received
+2025-11-20 22:22:48,606 - INFO - GET /openapi.json - Response: 200 OK - 0ms
