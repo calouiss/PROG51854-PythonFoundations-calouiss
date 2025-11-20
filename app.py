@@ -1,7 +1,7 @@
 # Library Management System - Assignments 1, 2, 3
 # Assignment 1: GET /items, /health with logging
 # Assignment 2: Full CRUD + OOP + Monitoring
-# Assignment 3: Database integration with SQLite
+# Assignment 3: Database Integration and JSON Handling
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
