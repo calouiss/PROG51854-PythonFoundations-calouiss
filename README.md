@@ -9,6 +9,8 @@ Basic API structure with /items and /health endpoints using FastAPI.
 
 Full CRUD (Books, Readers, Staff) + File persistence (CSV) + Logging + Unit Tests.
 
-🕓 Assignment 3 – To Be Announced (TBA)
+✅ Assignment 3 – Completed
+
+Database Integration and JSON Handling
 
 🕓 Assignment 4 – To Be Announced (TBA)
