@@ -1,14 +1,17 @@
-# Library Management System - Assignments 1, 2, 3
+# Library Management System - Assignments 1, 2, 3 & 4
 # Assignment 1: GET /items, /health with logging
 # Assignment 2: Full CRUD + OOP + Monitoring
 # Assignment 3: Database Integration and JSON Handling
+# Assignment 4: Security, Compliance, and Metrics Simulation
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse, HTMLResponse
+from pydantic import BaseModel, ValidationError
 from collections import defaultdict
 from typing import Dict
-import os, logging, time, sqlite3
+import os, logging, time, sqlite3, json
+from datetime import datetime, timedelta
+from jose import jwt
 
 # Logging setup
 os.makedirs("logs", exist_ok=True)
@@ -73,6 +76,7 @@ async def logging_middleware(request: Request, call_next):
         app.state.request_counts[f"{method} {path}"] += 1
         logging.info(f"{method} {path} - Response: {response.status_code} OK - {duration}ms")
         return response
+
     except Exception:
         app.state.error_count += 1
         app.state.endpoint_error_counts[path] += 1
@@ -104,7 +108,6 @@ def health_check():
     return {"status": "ok"}
 
 # ====== Assignment 3 (Database) ======
-
 # ---- Books ----
 @app.get("/books")
 def list_books():
@@ -297,7 +300,182 @@ def delete_staff(staff_id: int):
         return None
     raise HTTPException(404, "Staff not found")
 
+# ====== Assignment 4 ======
+
+# ---- Secrets Management ----
+def get_secret(secret_name, secrets_file="secrets.json"):
+    try:
+        with open(secrets_file, "r") as f:
+            secrets = json.load(f)
+        return secrets.get(secret_name)
+    except Exception as e:
+        logging.error(f"Secrets error: {e}")
+        return None
+
+# ---- Input Validation ----
+class SecureBook(BaseModel):
+    title: str
+    author: str
+    stock: int
+
+def validate_book_data(data):
+    try:
+        book = SecureBook(**data)
+        return True, book.dict()
+    except ValidationError as e:
+        return False, str(e)
+
+# ---- JWT Simulation ----
+SECRET_KEY = "supersecretkey"
+
+def create_jwt(payload):
+    payload["exp"] = datetime.utcnow() + timedelta(minutes=10)
+    return jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+
+def verify_jwt(token):
+    try:
+        decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        return True, decoded
+    except Exception as e:
+        return False, str(e)
+
+# ---- Compliance Check ----
+def check_compliance(resource):
+    if resource.get("encrypted"):
+        return "COMPLIANT"
+    return "NON_COMPLIANT"
+
+def evaluate_all_resources(resources):
+    results = {}
+    for r in resources:
+        results[r["name"]] = check_compliance(r)
+    return results
+
+# ---- Metrics ----
+a4_metrics = {"api_requests": 0, "errors": 0}
+
+def log_event(message, is_error=False):
+    logging.info(message)
+    a4_metrics["api_requests"] += 1
+    if is_error:
+        a4_metrics["errors"] += 1
+
+# ---- Optional Remediation ----
+def remediate(resource):
+    if not resource.get("encrypted"):
+        resource["encrypted"] = True
+        log_event(f"Resource {resource['name']} remediated")
+    return resource
+
+# ---- Endpoints ----
+@app.get("/assignment4/secrets")
+def get_secret_endpoint():
+    return {"DatabasePassword": get_secret("DatabasePassword")}
+
+@app.post("/assignment4/validate")
+def validate_endpoint(data: dict):
+    return validate_book_data(data)
+
+@app.get("/assignment4/token")
+def token_endpoint():
+    return {"token": create_jwt({"user": "student"})}
+
+@app.post("/assignment4/verify")
+def verify_endpoint(body: dict):
+    return verify_jwt(body.get("token"))
+
+@app.get("/assignment4/compliance")
+def compliance_endpoint():
+    resources = [
+        {"name": "bucket1", "encrypted": True},
+        {"name": "bucket2", "encrypted": False},
+        {"name": "bucket3", "encrypted": False}
+    ]
+    return evaluate_all_resources(resources)
+
+@app.get("/assignment4/metrics")
+def metrics_endpoint():
+    log_event("Metrics accessed")
+    return a4_metrics
+
+@app.get("/assignment4/remediate")
+def remediate_endpoint():
+    resource = {"name": "bucket2", "encrypted": False}
+    return remediate(resource)
+
+
+# ---- Dashboard ----
+@app.get("/assignment4/dashboard", response_class=HTMLResponse)
+def dashboard_charts():
+
+    import plotly.graph_objects as go
+    import plotly.express as px
+
+    # -------- DATA --------
+    statuses = ["200 OK", "301 Redirect", "404 Not Found", "500 Server Error"]
+    counts   = [120, 25, 15, 5]
+
+    days     = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"]
+    totals   = [50, 60, 55, 70, 60]
+    errors   = [5, 7, 6, 8, 5]
+
+    # -------- BAR CHART --------
+    bar_fig = go.Figure()
+    bar_fig.add_trace(go.Bar(x=statuses, y=counts,
+                             marker_color=["green", "blue", "orange", "red"]))
+    bar_fig.update_layout(title="Status Code Counts", height=350)
+
+    # -------- PIE CHART --------
+    pie_fig = px.pie(
+        names=statuses,
+        values=counts,
+        title="Status Distribution",
+        color=statuses,
+        color_discrete_map={
+            "200 OK": "green",
+            "301 Redirect": "blue",
+            "404 Not Found": "orange",
+            "500 Server Error": "red"
+        }
+    )
+    pie_fig.update_layout(height=350)
+
+    # -------- LINE CHART --------
+    line_fig = go.Figure()
+    line_fig.add_trace(go.Scatter(x=days, y=totals,
+                                  mode="lines+markers",
+                                  name="Total Requests"))
+    line_fig.add_trace(go.Scatter(x=days, y=errors,
+                                  mode="lines+markers",
+                                  name="Error Requests"))
+    line_fig.update_layout(title="Requests Over Time", height=350)
+
+    # -------- HTML PAGE --------
+    return f"""
+    <html>
+    <head>
+        <title>Assignment 4 Dashboard</title>
+        <style>
+            body {{ font-family: Arial; padding: 20px; }}
+            .chart-row {{ display: flex; gap: 30px; }}
+        </style>
+    </head>
+    <body>
+        <h1>Assignment 4 Dashboard</h1>
+
+        <div class="chart-row">
+            <div>{bar_fig.to_html(include_plotlyjs='cdn', full_html=False)}</div>
+            <div>{pie_fig.to_html(include_plotlyjs=False, full_html=False)}</div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            {line_fig.to_html(include_plotlyjs=False, full_html=False)}
+        </div>
+    </body>
+    </html>
+    """
+
 if __name__ == "__main__":
     import uvicorn
-    logging.info("Library Management System - Assignments 1, 2, 3")
+    logging.info("Library Management System - Assignments 1, 2, 3 & 4")
     uvicorn.run(app, host="127.0.0.1", port=8000)
