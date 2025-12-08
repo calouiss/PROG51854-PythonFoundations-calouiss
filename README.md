@@ -1,5 +1,5 @@
 🧠 PROG51854 - Python Foundations
-📂 Library Management System Progress
+📂 Library Management System Completed
 
 ✅ Assignment 1 – Completed
 
@@ -13,4 +13,7 @@ Full CRUD (Books, Readers, Staff) + File persistence (CSV) + Logging + Unit Test
 
 Database Integration and JSON Handling
 
-🕓 Assignment 4 – To Be Announced (TBA)
+✅ Assignment 4 – Python Application Security and Compliance Simulation
+
+![Dashboard Screenshot](screenshots/dashboard.png)
+![Metrics Screenshot](screenshots/metrics.png)
