@@ -14,6 +14,3 @@ Full CRUD (Books, Readers, Staff) + File persistence (CSV) + Logging + Unit Test
 Database Integration and JSON Handling
 
 ✅ Assignment 4 – Python Application Security and Compliance Simulation
-
-![Dashboard Screenshot](screenshots/dashboard.png)
-![Metrics Screenshot](screenshots/metrics.png)
